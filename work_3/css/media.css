@@ -1,0 +1,136 @@
+/* Large Devices, Wide Screens */
+@media screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media screen and (max-width : 992px) {
+	.scroll__img{
+		margin: 0 auto;
+	}
+	.scroll__back{
+		left: 120px;
+	}
+	.about-us .about-us__text{
+		margin-top: 40px;
+		text-align: center;
+	}
+	.feedback__map iframe{
+		height: 170px;
+	}
+	.services__block__hover .services__text {
+		padding-top: 4%;
+		padding-left: 4%;
+	}
+	.services__text{
+		padding-left: 4%;
+		padding-top: 4%;
+		padding-right: 8%;
+	}
+	.services__block__content-click .btn{
+		position: absolute;
+		top: 2%;
+		right: 12%;
+	}
+	.biography .scroll__img{
+		margin: 16px 0;
+	}
+
+}
+
+/* Small Devices, Tablets */
+@media screen and (max-width : 768px) {
+	.navbar ul li{
+		display: block;
+
+	}
+	.fade-menu{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 2;
+		background-color: rgba(0,0,0,0.4);
+		padding-top: 150px;
+	}
+	.menu .close-menu{
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 5px;
+		color: white;
+		font-size: 30px;
+		line-height: 0.7;
+
+	}
+	.menu .close-menu:hover{
+		cursor: pointer;
+		
+	}
+	.menu{
+		flex-direction: column;	
+		width: 200px;
+		height: 150px;
+		margin: auto;
+		position: relative;
+		animation-name: animatetop;
+		animation-duration: 0.4s;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+		
+	}
+	.header__content__img, .scroll__back, .biography .scroll__back, .biography .scroll__img{
+		display: none;
+	}
+
+	.team__worker{
+		padding-top: 20%;
+	}
+
+	.slick-arrow{
+		display: none !important;
+	}
+	.slick-dots{
+		width: 100%
+	}
+	.feedback__map{
+		margin-top: 30px;
+	}
+
+	.services__block, .services__block__hover{
+		padding-right: 0;
+	}
+	.team .col-md-4 {
+    padding-left: 15px;
+}
+
+
+.services__block__content-click {
+	padding-right: 0;
+}
+
+	/* Add Animation */
+	@-webkit-keyframes animatetop {
+		from {top:-300px; opacity:0} 
+		to {top:0; opacity:1}
+	}
+
+	@keyframes animatetop {
+		from {top:-300px; opacity:0}
+		to {top:0; opacity:1}
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media screen and (max-width : 480px) {
+	.scroll__img {
+    width: 290px;
+  }
+  .biography__desc{
+  	padding: 20px 40px;
+  }
+  .header__content h1{
+  	font-size: 28px;
+  }
+}
+
