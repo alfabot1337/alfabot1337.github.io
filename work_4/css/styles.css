@@ -192,6 +192,10 @@ header {
 .services__numbers-speak__count {
     width: 35%;
 }
+.services__numbers-speak__count p {
+    font-size: 1.5vw;
+    font-weight: 600;
+}
 .services__numbers-speak__count ul {
     margin-top: 3vw;
     width: 61%;
