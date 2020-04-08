@@ -1,15 +1,45 @@
-* {
-  color: #000;
-  text-decoration: none;
-  user-select: none;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
 }
 body {
-  padding: 0 5.555555%;
-  font-family: 'Baloo Chettan 2', cursive;
-  font-size: 1.8vw;
+    line-height: 1;
+    padding: 0 5.555555%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.8vw;
 }
+ol, ul {
+    list-style: none;
+}
+* {
+    box-sizing: border-box;
+    color: #000;
+    text-decoration: none;
+}
+
 p {
-    font-family: 'Sen';
+    font-family: 'Lato', sans-serif;
     font-size: 1.1vw;
 }
 header {
@@ -27,7 +57,7 @@ header {
   margin-left: 9vw;
 }
 .navbar ul li a {
-  font-family: 'Sen';
+  font-family: 'Lato', sans-serif;
   font-size: 1vw;
   font-weight: 600;
 
@@ -56,11 +86,13 @@ header {
   padding-bottom: 9%;
 }
 .first-screen__content__text h1 {
-  font-size: 4.7vw;
+  font-size: 4.3vw;
+  margin-top: 1vw;
 }
 .first-screen__content__text p {
   font-size: 1.5vw;
   opacity: 0.7;
+  letter-spacing: 0.03em;
 }
 .first-screen__content__image {
   width: 50%;
@@ -90,7 +122,7 @@ header {
 }
 .first-screen__footer__copyright p, .copyright {
   margin: auto;
-  font-family: 'Sen';
+  font-family: 'Lato', sans-serif;
   font-size: 1.1vw;
   opacity: 0.7;
 }
@@ -108,13 +140,17 @@ header {
   margin-right: 11vw;
 }
 
+.slider-control ul {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 2.5vw;
+}
 .slider-control ul li {
   display: inline-block;
 }
 .slider-control {
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
   align-items: center;
 }
 
@@ -123,6 +159,10 @@ header {
   width: 1vw;
   height: 1vw;
   cursor: pointer;
+}
+.slider-control .prev:hover,
+.slider-control .next:hover {
+  opacity: .7;
 }
 .slider-control .prev {
   background: url(../img/left.svg) no-repeat left;
@@ -134,14 +174,21 @@ header {
   -webkit-background-size: contain;
   background-size: contain;
 }
-.slider-control .next:before {
+.slider-control .vertical-line {
+    width: 0.1vw;
+    height: 1.1vw;
+    background-color: #fff;
+    opacity: 0.6;
+    margin: 0 0.2vw;
+}
+/*.slider-control .next:before {
   content: '';
   display: block;
   width: 1px;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.5);
   margin-left: -0.23vw;
-}
+}*/
 
 .services {
     padding-top: 150px;
@@ -207,7 +254,7 @@ header {
     display: block;
     position: relative;
     top: -4.3vw;
-    left: 5.5vw;
+    left: 6.7vw;
     opacity: .8;
 }
 
@@ -218,13 +265,13 @@ header {
     column-count: 2; 
 }
 .services__numbers-speak__content__item {
-    font-family: 'Sen';
+    font-family: 'Lato', sans-serif;
     font-size: 1.2vw;
     margin-bottom: 2.5vw;
     font-weight: 600;
 }
 .services__numbers-speak__content__item h3 {
-    font-family: 'Baloo Chettan 2', cursive;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.8vw;
 }
 .services__numbers-speak__content__item p {
@@ -279,7 +326,8 @@ header {
 }
 .portfolio__cases__case p {
     margin: 1vw 0;
-    opacity: .8
+    opacity: .8;
+    letter-spacing: 0.06em;
 }
 .portfolio__cases__case:nth-of-type(1){
     margin-top: 10vw;
@@ -302,7 +350,7 @@ header {
 .contact__content p {
     font-size: 1.4vw;
     margin: 4vw 0;
-    font-family: 'Baloo Chettan 2', cursive;
+    font-family: 'Open Sans', sans-serif;
 }
 .contact__input {
     border-bottom: 1px solid #999999;
@@ -318,6 +366,10 @@ header {
 }
 
 .footer {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -348,3 +400,12 @@ header {
     opacity: .7;
     margin: unset;
 }
+
+/* TODO
+- 1. Не стандартный шрифт, который не встроен в браузер и грузится отдельно. Плохо, не соответствует предоставленному гайдлайну (я его повторю ниже)
+2. Зачем-то используется jquery - мы не работаем с сервером. И по гайдлайну его было сказано избегать (я повторю его ниже)
+- 3. Очень много стилей разных импортнуто. Зачем используются импортнутые стили?.
+4. Я понимаю, что это заглушка, но картинки гугла и яндекса не оптимизированы под сеть.
+- 5. Цифры в Numbers speak for themselves налазят на текст.
+6. Стрелочки там где слайдер с компаниями - неровные (левая имеет больший отступ от центра)
+- 7. Текст на сайте нельзя выделить. Возможные проблемы для людей, которые пользуются переводчиками сайтов или сео.*/
