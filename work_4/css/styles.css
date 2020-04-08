@@ -159,6 +159,8 @@ header {
   width: 1vw;
   height: 1vw;
   cursor: pointer;
+
+  transition: .5s;
 }
 .slider-control .prev:hover,
 .slider-control .next:hover {
@@ -387,12 +389,11 @@ header {
     display: inline-block;
     margin-left: .6vw;
 }
-.footer .footer__social i {
-    color: #fff;
-    
+.footer .footer__social .social {
+    height: 1.3vw;
     transition: .4s;
 }
-.footer .footer__social i:hover {
+.footer .footer__social .social:hover {
     transform: translateY(-.2vw);
 }
 .footer__copyright {
