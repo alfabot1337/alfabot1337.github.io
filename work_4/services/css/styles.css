@@ -1,0 +1,95 @@
+@import url(../../css/styles.css);
+
+.navbar ul li a:not(.navbar__current) {
+  opacity: 0.7;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+.top__banner {
+  background-image: url(../img/header_bg.jpg);
+  background-size: cover;
+  margin: 0 -6.255%;
+  height: 86.6vh;
+}
+
+.projects__heading {
+  margin-top: -20vh;
+  margin-left: -6.255%;
+  background-color: #fff;
+  padding: 2% 8% 0 6.255%;
+  width: 95%;
+}
+.projects__heading h3 {
+  font-weight: 500;
+  font-size: 2vw;
+  margin-bottom: 2vw;
+}
+.projects__heading p {
+  max-width: 90%;
+  font-size: 1.3vw;
+  line-height: 1.2;
+}
+
+.projects__items {
+  margin-top: 10vw;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.projects__items__item {
+  border: 2px solid #eaeaea;
+  padding: 2vw;
+  padding-right: 6vw;
+  display: flex;
+  flex-basis: 49.7%;
+  margin-bottom: 0.6vw;
+
+  transition: ease 0.1s;
+}
+.projects__items__item:hover {
+  transform: scale(1.01);
+}
+.projects__items__item__image img {
+  width: 65%;
+}
+.projects__items__item__content h4 {
+  font-size: 1.6vw;
+  font-weight: 600;
+}
+.projects__items__item__content p {
+  font-size: 1.1vw;
+  opacity: 0.7;
+  margin: 1vw 0;
+}
+.more {
+  font-size: 1.1vw;
+  font-weight: 700;
+}
+
+.how {
+  padding-top: 12vw;
+}
+.how h2 {
+  font-size: 3.2vw;
+  font-weight: 600;
+  margin-bottom: 7vw;
+}
+.how__items {
+  display: flex;
+  justify-content: space-evenly;
+}
+.how__items__item {
+  text-align: center;
+  width: 11vw;
+  font-weight: 700;
+}
+.how__items__item img {
+  width: 50%;
+}
+
+.contact {
+  padding-top: 20vw;
+}
