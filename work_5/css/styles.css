@@ -21,18 +21,27 @@ header {
   background-color: rgb(212, 212, 212);
   box-shadow: 0px 10px 17px -1px rgba(0, 0, 0, 0.75);
   width: 100%;
-  height: 100px;
+  height: 80px;
   position: fixed;
   top: -150px;
   left: 0;
   z-index: 2;
   transition: 0.5s;
 }
-
+.header__top.fixed {
+  transition: 0.5s;
+  top: 50px;
+}
+.header__top {
+  transition: 0.5s;
+}
 .header__middle {
   margin: 150px 0 100px;
 }
 
+nav.fixed {
+  right: 9%;
+}
 .navbar__item {
   border-left: 1px solid #fff;
   padding: 0 10px;
@@ -44,6 +53,7 @@ header {
 .navbar__item a {
   font-size: 14px;
   color: #fff;
+  transition: 0.5s;
 }
 .navbar__item a:hover {
   color: #2d5ec2;
@@ -58,6 +68,60 @@ header {
 
 .navbar___active a {
   color: #2d5ec2;
+}
+.navbar__search {
+  display: none;
+  border: 1px solid #8a8a8a;
+  transition: opacity 1s ease-out;
+}
+.search-open {
+  display: none;
+}
+.search-show {
+  display: inline-flex;
+}
+.navbar__search input {
+  border: none;
+  font-size: 11px;
+  padding: 0 5px;
+  width: 110px;
+  outline: none;
+}
+.search__button {
+  line-height: 0;
+  padding: 3px;
+  font-size: 14px;
+  color: #2d5ec2;
+  border: none;
+  background-color: #e1ebff;
+  outline: none;
+}
+
+.language-switcher {
+  display: inline-flex;
+  position: relative;
+}
+.language-switcher a {
+  display: block;
+  width: 38px;
+  height: 31px;
+  transition: 0.5s;
+}
+.second-language {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  opacity: 0;
+  position: absolute;
+  top: 38px;
+  left: 0;
+}
+.language-switcher:hover .second-language {
+  opacity: 1;
+  top: 30px;
+}
+.language-switcher:hover .main-language {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .numbers {
@@ -169,6 +233,7 @@ section {
 .section__gallery_item img {
   width: 100%;
   height: 320px;
+  transform: scale(1.2);
   margin-bottom: 15px;
   object-fit: cover;
   transition: 0.5s;
@@ -190,7 +255,7 @@ section {
   max-height: 320px;
 }
 .scale img:hover {
-  transform: scale(1.2);
+  transform: scale(1);
 }
 
 .section__more {

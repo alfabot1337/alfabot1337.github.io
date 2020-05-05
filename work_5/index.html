@@ -14,14 +14,14 @@
   <body>
     <header>
       <div class="container">
-        <div class="row header__top">
+        <div class="row header__top fixed">
           <div class="header_scroll"></div>
           <div class="col-lg-3">
             <a href="#" class="fixed">
               <img src="img/logo.png" alt="AIK Logo" />
             </a>
           </div>
-          <div class="col-lg-8 ml-auto">
+          <div class="col-lg-9 ml-auto">
             <nav class="fixed">
               <ul class="navbar navbar-default navbar-fixed-bottom">
                 <li class="navbar__item navbar___active">
@@ -35,8 +35,33 @@
                 <li class="navbar__item"><a href="#">Контакты</a></li>
                 <li class="navbar__item"><a href="#">Log in</a></li>
                 <li class="navbar__item">
-                  <a href="#"><i class="fa fa-search"></i></a>
-                  <a href="#" class="navbar__language">RU</a>
+                  <div class="navbar__search">
+                    <input
+                      type="search"
+                      name="search"
+                      id="search"
+                      placeholder="Введите слово..."
+                    />
+                    <button
+                      type="submit"
+                      class="search__button"
+                      onclick="searchToggle()"
+                    >
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </div>
+                  <a
+                    href="#"
+                    onclick="searchToggle()"
+                    class="search-open search-show"
+                    ><i class="fa fa-search"></i
+                  ></a>
+                  <div class="language-switcher">
+                    <a href="#" class="navbar__language main-language">RU</a>
+                    <a href="#" class="navbar__language second-language">EN</a>
+                  </div>
+
+                  <!-- <a href="#" class="navbar__language language-bottom">EN</a> -->
                 </li>
               </ul>
             </nav>
@@ -537,22 +562,33 @@
       window.onscroll = function () {
         scrolled = window.pageYOffset || document.documentElement.scrollTop;
         let scrollBlock = document.querySelector('.header_scroll');
+        let navBarLinks = document.querySelectorAll('.navbar__item a');
+        let headerTop = document.querySelector('.header__top');
         if (scrolled > 400) {
           scrollBlock.style.top = '0';
+          headerTop.style.top = '15px';
+          // navBarLinks.forEach((i) => (i.style.color = '#2d5ec2'));
         }
         if (400 > scrolled) {
           scrollBlock.style.top = '-150px';
+          headerTop.style.top = '50px';
+          // navBarLinks.forEach((i) => (i.style.color = '#fff'));
         }
 
         let convert = document.querySelector('.convert');
         if (scrolled > 20) {
           convert.style.top = '90vh';
-          // convert.style.bottom = '10vh';
         } else if (scrolled < 20) {
-          // convert.style.bottom = 'unset';
           convert.style.top = '620px';
         }
       };
+
+      function searchToggle(e) {
+        let searchInput = document.querySelector('.navbar__search');
+        let searchButton = document.querySelector('.navbar__search + a');
+        searchButton.classList.toggle('search-show');
+        searchInput.classList.toggle('search-show');
+      }
 
       function popUp() {
         let popup = document.querySelector('.popup-wrapper');
