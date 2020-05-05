@@ -143,7 +143,7 @@ header {
   background-position: 50% 50%;
   position: fixed;
   right: 10vw;
-  bottom: 10vh;
+  top: 600px;
   z-index: 2;
 }
 
