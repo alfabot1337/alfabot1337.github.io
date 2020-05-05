@@ -143,8 +143,9 @@ header {
   background-position: 50% 50%;
   position: fixed;
   right: 10vw;
-  top: 600px;
+  top: 620px;
   z-index: 2;
+  transition: 0.2s;
 }
 
 section {

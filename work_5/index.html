@@ -544,12 +544,14 @@
           scrollBlock.style.top = '-150px';
         }
 
-        // let convert = document.querySelector('.convert');
-        // if (scrolled > 20) {
-        //   convert.style.bottom = '2vw';
-        // } else if (scrolled < 20) {
-        //   convert.style.bottom = '20px';
-        // }
+        let convert = document.querySelector('.convert');
+        if (scrolled > 20) {
+          convert.style.top = '90vh';
+          // convert.style.bottom = '10vh';
+        } else if (scrolled < 20) {
+          // convert.style.bottom = 'unset';
+          convert.style.top = '620px';
+        }
       };
 
       function popUp() {
