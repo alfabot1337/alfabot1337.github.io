@@ -108,7 +108,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-lg-1 offset-lg-9">
+          <div class="col-lg-1 ml-auto">
             <a href="#" class="convert" onclick="popUp()"></a>
           </div>
         </div>
@@ -542,6 +542,13 @@
         }
         if (400 > scrolled) {
           scrollBlock.style.top = '-150px';
+        }
+
+        let convert = document.querySelector('.convert');
+        if (scrolled > 20) {
+          convert.style.bottom = '60px';
+        } else if (scrolled < 20) {
+          convert.style.bottom = '-10px';
         }
       };
 
