@@ -17,6 +17,18 @@ header {
   padding-bottom: 75px;
 }
 
+.header_scroll {
+  background-color: rgb(212, 212, 212);
+  box-shadow: 0px 10px 17px -1px rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: -150px;
+  left: 0;
+  z-index: 2;
+  transition: 0.5s;
+}
+
 .header__middle {
   margin: 150px 0 100px;
 }
@@ -44,6 +56,10 @@ header {
   margin-left: 5px;
 }
 
+.navbar___active a {
+  color: #2d5ec2;
+}
+
 .numbers {
   margin-left: -15px;
 }
@@ -55,16 +71,25 @@ header {
 .numbers__item img {
   cursor: pointer;
   width: 35px;
+  z-index: 1;
 }
 .numbers__item span {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   font-size: 14px;
   background-color: #fff;
   line-height: 1.8;
   padding: 0 7px;
+  transform: translateX(-20px);
+  z-index: 0;
+
+  transition: all 0.3s;
 }
 .numbers__item img:hover ~ span {
-  display: inline-flex;
+  visibility: visible;
+  opacity: 1;
+  width: auto;
+  transform: translateX(0);
 }
 
 .header__content {
@@ -140,6 +165,7 @@ section {
   width: 100%;
   height: 320px;
   margin-bottom: 15px;
+  object-fit: cover;
   transition: 0.5s;
   cursor: pointer;
 }
@@ -173,10 +199,13 @@ section {
   text-align: center;
   line-height: 60px;
   margin-top: 50px;
+  transition: 0.3s ease-out;
 }
 .section__more:hover {
   color: #fff;
   text-decoration: none;
+  background: #055692;
+  box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.2);
 }
 
 .bg-blue {
@@ -195,6 +224,32 @@ section {
 }
 .equipment-4 {
   background-image: url(../img/equipment/equipment-4.jpg);
+}
+.equipment-5 {
+  background-image: url(../img/equipment/equipment-5.jpg);
+}
+.equipment-6 {
+  background-image: url(../img/equipment/equipment-6.jpg);
+}
+.equipment-7 {
+  background-image: url(../img/equipment/equipment-7.jpg);
+  background-position-y: 30%;
+}
+.equipment-8 {
+  background-image: url(../img/equipment/equipment-8.jpg);
+}
+.equipment-9 {
+  background-image: url(../img/equipment/equipment-9.jpg);
+}
+.equipment-10 {
+  background-image: url(../img/equipment/equipment-10.jpg);
+}
+.equipment-11 {
+  background-image: url(../img/equipment/equipment-11.jpg);
+  background-position-y: 30%;
+}
+.equipment-12 {
+  background-image: url(../img/equipment/equipment-12.jpg);
 }
 .gallery-min__item {
   width: auto;
@@ -303,15 +358,96 @@ footer {
   font-size: 17px;
 }
 
-.header_scroll {
-  background-color: rgb(212, 212, 212);
-  box-shadow: 0px 10px 17px -1px rgba(0, 0, 0, 0.75);
-  width: 100%;
-  height: 100px;
+.popup-wrapper {
+  visibility: hidden;
   position: fixed;
-  top: -150;
-  left: 0;
-  z-index: 1;
-  /* opacity: 0; */
-  transition: 0.5s;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.show {
+  visibility: visible;
+}
+.show .popup {
+  opacity: 1;
+}
+.popup {
+  opacity: 0;
+  width: 1000px;
+  padding: 30px 50px;
+  background-color: #2d5ec2;
+  position: relative;
+
+  transition: all 0.5s;
+}
+.popup__close {
+  font-weight: 600;
+  font-size: 40px;
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  cursor: pointer;
+}
+.popup_header {
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 42px;
+}
+
+.popup__inputs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.popup__input {
+  position: relative;
+  margin-bottom: 4vw;
+}
+.popup__input:last-of-type {
+  margin-bottom: 30px;
+}
+.popup__input input,
+.popup__input textarea {
+  font-size: 17px;
+  padding: 0 16px;
+  line-height: 2.5;
+  width: 400px;
+  outline: none;
+}
+.popup__input input[required] + label:after,
+.popup__input textarea[required] + label:after {
+  content: '*';
+  color: red;
+  padding-left: 5px;
+}
+.popup__input label {
+  font-size: 17px;
+  position: absolute;
+  top: -22px;
+  left: 20px;
+}
+.popup__input textarea {
+  resize: none;
+  width: 900px;
+  height: 170px;
+}
+.popup button {
+  background-color: #288ad3;
+  padding: 17px 40px;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  text-transform: uppercase;
+  box-shadow: inset 0px -5px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+.popup button:hover {
+  background-color: rgb(32, 122, 190);
 }

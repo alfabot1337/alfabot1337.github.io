@@ -24,7 +24,9 @@
           <div class="col-lg-8 ml-auto">
             <nav class="fixed">
               <ul class="navbar navbar-default navbar-fixed-bottom">
-                <li class="navbar__item"><a href="#">Главная</a></li>
+                <li class="navbar__item navbar___active">
+                  <a href="#">Главная</a>
+                </li>
                 <li class="navbar__item"><a href="#">О компании</a></li>
                 <li class="navbar__item"><a href="#">Продукт</a></li>
                 <li class="navbar__item"><a href="#">Статьи</a></li>
@@ -107,7 +109,74 @@
             </ul>
           </div>
           <div class="col-lg-1 offset-lg-9">
-            <a href="#" class="convert"></a>
+            <a href="#" class="convert" onclick="popUp()"></a>
+          </div>
+        </div>
+      </div>
+      <div class="popup-wrapper">
+        <div class="popup">
+          <h3 class="popup_header">
+            Свяжитесь с нами
+          </h3>
+          <form action="#">
+            <div class="popup__inputs">
+              <div class="popup__input">
+                <input
+                  type="text"
+                  id="secondname"
+                  placeholder="Ваше ФИО"
+                  required
+                />
+                <label for="secondname">ФИО</label>
+              </div>
+              <div class="popup__input">
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="example@gmail.com"
+                  required
+                />
+                <label for="email">E-mail</label>
+              </div>
+              <div class="popup__input">
+                <input type="tel" id="tel" placeholder="+38(091)111 11 11" />
+                <label for="tel">Номер телефона</label>
+              </div>
+              <div class="popup__input">
+                <input
+                  type="text"
+                  id="country"
+                  placeholder="Ваша страна"
+                  required
+                />
+                <label for="country">Страна</label>
+              </div>
+              <div class="popup__input">
+                <input
+                  type="text"
+                  id="company"
+                  placeholder="Ваше предприятие"
+                />
+                <label for="company">Название предприятия</label>
+              </div>
+              <div class="popup__input">
+                <input type="text" id="area" placeholder="Площадь" />
+                <label for="area">Обрабатываемая площадь</label>
+              </div>
+              <div class="popup__input">
+                <textarea
+                  name="question"
+                  id="question"
+                  placeholder="Ваш текст..."
+                  required
+                ></textarea>
+                <label for="area">Ваш вопрос</label>
+              </div>
+            </div>
+            <button type="submit">Отправить</button>
+          </form>
+          <div class="popup__close" onclick="popUp()">
+            <i class="fas fa-times"></i>
           </div>
         </div>
       </div>
@@ -210,25 +279,25 @@
         <div class="row section__gallery">
           <div class="col-lg-6 section__gallery_item">
             <div class="scale">
-              <img src="img/plantings/plantings-1.jpg" alt="Plantings" />
+              <img src="img/plantings/plantings-5.jpg" alt="Plantings" />
             </div>
             <p>Текст, Текст, Текст</p>
           </div>
           <div class="col-lg-6 section__gallery_item">
             <div class="scale">
-              <img src="img/plantings/plantings-2.jpg" alt="Plantings" />
+              <img src="img/plantings/plantings-6.jpg" alt="Plantings" />
             </div>
             <p>Текст, Текст, Текст</p>
           </div>
           <div class="col-lg-6 section__gallery_item">
             <div class="scale">
-              <img src="img/plantings/plantings-3.jpg" alt="Plantings" />
+              <img src="img/plantings/plantings-7.jpg" alt="Plantings" />
             </div>
             <p>Текст, Текст, Текст</p>
           </div>
           <div class="col-lg-6 section__gallery_item">
             <div class="scale">
-              <img src="img/plantings/plantings-4.jpg" alt="Plantings" />
+              <img src="img/plantings/plantings-8.jpg" alt="Plantings" />
             </div>
             <p>Текст, Текст, Текст</p>
           </div>
@@ -254,22 +323,22 @@
         </div>
         <div class="row section__gallery-min">
           <div class="col-lg-3">
-            <div class="gallery-min__item equipment-1">
-              <p>Текст, Текст, Текст</p>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="gallery-min__item equipment-2">
-              <p>Текст, Текст, Текст</p>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="gallery-min__item equipment-3">
-              <p>Текст, Текст, Текст</p>
-            </div>
-          </div>
-          <div class="col-lg-3">
             <div class="gallery-min__item equipment-4">
+              <p>Текст, Текст, Текст</p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="gallery-min__item equipment-5">
+              <p>Текст, Текст, Текст</p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="gallery-min__item equipment-6">
+              <p>Текст, Текст, Текст</p>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="gallery-min__item equipment-7">
               <p>Текст, Текст, Текст</p>
             </div>
           </div>
@@ -294,25 +363,25 @@
         <div class="row section__gallery">
           <div class="col-lg-6 section__gallery_item">
             <div class="scale">
-              <img src="img/plantings/plantings-1.jpg" alt="Plantings" />
+              <img src="img/plantings/plantings-9.jpg" alt="Plantings" />
             </div>
             <p>Текст, Текст, Текст</p>
           </div>
           <div class="col-lg-6 section__gallery_item">
             <div class="scale">
-              <img src="img/plantings/plantings-2.jpg" alt="Plantings" />
+              <img src="img/plantings/plantings-10.jpg" alt="Plantings" />
             </div>
             <p>Текст, Текст, Текст</p>
           </div>
           <div class="col-lg-6 section__gallery_item">
             <div class="scale">
-              <img src="img/plantings/plantings-3.jpg" alt="Plantings" />
+              <img src="img/plantings/plantings-11.jpg" alt="Plantings" />
             </div>
             <p>Текст, Текст, Текст</p>
           </div>
           <div class="col-lg-6 section__gallery_item">
             <div class="scale">
-              <img src="img/plantings/plantings-4.jpg" alt="Plantings" />
+              <img src="img/plantings/plantings-12.jpg" alt="Plantings" />
             </div>
             <p>Текст, Текст, Текст</p>
           </div>
@@ -338,25 +407,25 @@
         </div>
         <div class="row section__gallery-min">
           <div class="col-lg-3">
-            <div class="gallery-min__item equipment-1 advantage">
+            <div class="gallery-min__item equipment-9 advantage">
               <img src="img/advantages/advantage-1.png" alt="" />
               <p>Улучшение урожайности</p>
             </div>
           </div>
           <div class="col-lg-3">
-            <div class="gallery-min__item equipment-2 advantage">
+            <div class="gallery-min__item equipment-10 advantage">
               <img src="img/advantages/advantage-2.png" alt="" />
               <p>Снижение рисков</p>
             </div>
           </div>
           <div class="col-lg-3">
-            <div class="gallery-min__item equipment-3 advantage">
+            <div class="gallery-min__item equipment-11 advantage">
               <img src="img/advantages/advantage-3.png" alt="" />
               <p>Экономия средств</p>
             </div>
           </div>
           <div class="col-lg-3">
-            <div class="gallery-min__item equipment-4 advantage">
+            <div class="gallery-min__item equipment-12 advantage">
               <img src="img/advantages/advantage-4.png" alt="" />
               <p>Обучение и сопровождени</p>
             </div>
@@ -475,6 +544,11 @@
           scrollBlock.style.top = '-150px';
         }
       };
+
+      function popUp() {
+        let popup = document.querySelector('.popup-wrapper');
+        popup.classList.toggle('show');
+      }
     </script>
   </body>
 </html>
