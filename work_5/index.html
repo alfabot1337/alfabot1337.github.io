@@ -13,6 +13,10 @@
   </head>
   <body>
     <header>
+      <div class="slide-first"></div>
+      <div class="slide-second"></div>
+      <div class="slide-third"></div>
+      <div class="slide-fourth"></div>
       <div class="container">
         <div class="row header__top fixed">
           <div class="header_scroll"></div>
@@ -605,6 +609,21 @@
         let popup = document.querySelector('.popup-wrapper');
         popup.classList.toggle('show');
       }
+      var backgrounds = [
+      './img/main.jpg',
+      'img/main-bg-2.jpg',
+      'img/main-bg-3.jpg'
+      ]
+      var BACKGROUND_IMAGE_CHANGE_INTERVAL = 5 * 1000
+      var currentImage = 0
+      ;(function showNextImage() {
+        document.querySelector('header').style.backgroundImage = 'url(' + backgrounds[currentImage] + ')'
+        currentImage += 1
+        if (currentImage >= backgrounds.length) {
+          currentImage = 0
+        }
+        setTimeout(showNextImage, BACKGROUND_IMAGE_CHANGE_INTERVAL)
+      }())
     </script>
   </body>
 </html>
