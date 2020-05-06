@@ -18,7 +18,7 @@
           <div class="header_scroll"></div>
           <div class="col-lg-3">
             <a href="#" class="fixed">
-              <img src="img/logo.png" alt="AIK Logo" />
+              <img class="logo" src="img/logo.png" alt="AIK Logo"/>
             </a>
           </div>
           <div class="col-lg-9 ml-auto">
@@ -563,16 +563,27 @@
         scrolled = window.pageYOffset || document.documentElement.scrollTop;
         let scrollBlock = document.querySelector('.header_scroll');
         let navBarLinks = document.querySelectorAll('.navbar__item a');
+        let navBarActive = document.querySelector('.navbar___active a');
+        let [,...navBarItems] = document.querySelectorAll('.navbar__item');
+        let navBarLang = document.querySelector('.navbar__language');
         let headerTop = document.querySelector('.header__top');
+        let logo = document.querySelector('.logo');
         if (scrolled > 400) {
           scrollBlock.style.top = '0';
           headerTop.style.top = '15px';
-          // navBarLinks.forEach((i) => (i.style.color = '#2d5ec2'));
+          logo.src = 'img/A.I.K.svg';
+          navBarLinks.forEach((i) => (i.style.color = '#2d5ec2'));
+          navBarItems.forEach(i => i.style.borderLeft = '1px solid #2d5ec2');
+          navBarLang.style.border = '1px solid #2d5ec2';
         }
         if (400 > scrolled) {
           scrollBlock.style.top = '-150px';
           headerTop.style.top = '50px';
-          // navBarLinks.forEach((i) => (i.style.color = '#fff'));
+          logo.src = 'img/logo.png'
+          navBarLinks.forEach((i) => (i.style.color = '#fff'));
+          navBarItems.forEach(i => i.style.borderLeft = '1px solid #fff');
+          navBarLang.style.border = '1px solid #fff';
+          navBarActive.style.color = '#2d5ec2';
         }
 
         let convert = document.querySelector('.convert');
