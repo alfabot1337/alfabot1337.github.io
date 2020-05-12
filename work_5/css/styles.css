@@ -28,7 +28,7 @@ header {
   width: 100%;
   height: 80px;
   position: fixed;
-  top: -150px;
+  top: -200px;
   left: 0;
   z-index: 2;
   transition: 0.5s;
@@ -46,6 +46,7 @@ header {
 
 nav.fixed {
   right: 9%;
+  transition: .5s;
 }
 .navbar__item {
   border-left: 1px solid #fff;
@@ -528,4 +529,100 @@ footer {
 }
 .popup button:hover {
   background-color: rgb(32, 122, 190);
+}
+
+@media screen and (max-width: 1200px) {
+  a.fixed {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  nav.fixed {
+    left: 9%;
+    top: 95px;
+  }
+  .header_scroll {
+    height: 130px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  nav.fixed {
+    transform: scale(0);
+    background-color: rgba(0, 0, 0, 0.739);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+  .nav_open {
+    transform: scale(1) !important;
+  }
+  nav.fixed ul {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 70%;
+    margin-top: 60px;
+  }
+  nav.fixed li {
+    border-left: none;
+  }
+  nav.fixed a {
+    font-size: 24px;
+  }
+  .navbar__item:last-of-type {
+    display: none;
+  }
+  .navbar___active a {
+    color: #ffffff;
+  }
+  a.fixed {
+    left: unset;
+    transform: unset;
+    top: 25px;
+  }
+  .numbers {
+    display: none;
+  }
+  .burger {
+    position: fixed;
+    right: 9%;
+    top: 25px;
+    z-index: 2;
+    width: 30px;
+    height: 26px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+    
+  }
+  .burger span {
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    transition: 0.5s;
+  }
+  .burger_open {
+    z-index: 3;
+  }
+  .burger_open span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+  .burger_open span:nth-child(2) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+  .burger_open span:nth-child(3) {
+    opacity: 0;
+  }
+  .header__top.fixed {
+    top: 20px;
+  }
+  .header_scroll {
+    height: 90px;
+  }
+  .gallery-min__item, .social__list {
+    margin-bottom: 30px;
+  }
 }

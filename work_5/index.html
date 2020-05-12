@@ -26,7 +26,13 @@
             </a>
           </div>
           <div class="col-lg-9 ml-auto">
+            <div class="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
             <nav class="fixed">
+              
               <ul class="navbar navbar-default navbar-fixed-bottom">
                 <li class="navbar__item navbar___active">
                   <a href="#">Главная</a>
@@ -112,7 +118,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-lg-6 offset-lg-2 header__content">
+          <div class="col-lg-6 offset-lg-2 col-md-12 offset-md-0 header__content">
             <h1>СЛОГАН СЛОГАН СЛОГАН</h1>
             <p>Краткое описание компании, предлагаемые улуги и прочее</p>
           </div>
@@ -561,69 +567,6 @@
         </div>
       </div>
     </footer>
-    <script>
-      let scrolled;
-      window.onscroll = function () {
-        scrolled = window.pageYOffset || document.documentElement.scrollTop;
-        let scrollBlock = document.querySelector('.header_scroll');
-        let navBarLinks = document.querySelectorAll('.navbar__item a');
-        let navBarActive = document.querySelector('.navbar___active a');
-        let [,...navBarItems] = document.querySelectorAll('.navbar__item');
-        let navBarLang = document.querySelector('.navbar__language');
-        let headerTop = document.querySelector('.header__top');
-        let logo = document.querySelector('.logo');
-        if (scrolled > 400) {
-          scrollBlock.style.top = '0';
-          headerTop.style.top = '15px';
-          logo.src = 'img/A.I.K.svg';
-          navBarLinks.forEach((i) => (i.style.color = '#2d5ec2'));
-          navBarItems.forEach(i => i.style.borderLeft = '1px solid #2d5ec2');
-          navBarLang.style.border = '1px solid #2d5ec2';
-        }
-        if (400 > scrolled) {
-          scrollBlock.style.top = '-150px';
-          headerTop.style.top = '50px';
-          logo.src = 'img/logo.png'
-          navBarLinks.forEach((i) => (i.style.color = '#fff'));
-          navBarItems.forEach(i => i.style.borderLeft = '1px solid #fff');
-          navBarLang.style.border = '1px solid #fff';
-          navBarActive.style.color = '#2d5ec2';
-        }
-
-        let convert = document.querySelector('.convert');
-        if (scrolled > 20) {
-          convert.style.top = '90vh';
-        } else if (scrolled < 20) {
-          convert.style.top = '620px';
-        }
-      };
-
-      function searchToggle(e) {
-        let searchInput = document.querySelector('.navbar__search');
-        let searchButton = document.querySelector('.navbar__search + a');
-        searchButton.classList.toggle('search-show');
-        searchInput.classList.toggle('search-show');
-      }
-
-      function popUp() {
-        let popup = document.querySelector('.popup-wrapper');
-        popup.classList.toggle('show');
-      }
-      var backgrounds = [
-      './img/main.jpg',
-      'img/main-bg-2.jpg',
-      'img/main-bg-3.jpg'
-      ]
-      var BACKGROUND_IMAGE_CHANGE_INTERVAL = 5 * 1000
-      var currentImage = 0
-      ;(function showNextImage() {
-        document.querySelector('header').style.backgroundImage = 'url(' + backgrounds[currentImage] + ')'
-        currentImage += 1
-        if (currentImage >= backgrounds.length) {
-          currentImage = 0
-        }
-        setTimeout(showNextImage, BACKGROUND_IMAGE_CHANGE_INTERVAL)
-      }())
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
