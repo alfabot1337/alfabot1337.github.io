@@ -18,10 +18,13 @@ window.onscroll = function () {
     navBarItems.forEach(i => i.style.borderLeft = '1px solid #2d5ec2');
     navBarLang.style.border = '1px solid #2d5ec2';
     secondLanguage.style.border = '1px solid #2d5ec2';
+    document.querySelector('nav.fixed').style.top = '15px';
 
-    if (window.screen.availWidth <= 1200 && window.screen.availWidth > 1024) {
+    if (window.innerWidth <= 1200 && window.innerWidth > 1024) {
         document.querySelector('nav.fixed').style.top = '60px';
-    } else if (window.screen.availWidth <= 1024) {
+        console.log('x');
+        
+    } else if (window.innerWidth <= 1024) {
         headerTop.style.top = '20px';
         document.querySelector('nav.fixed').style.top = '0';
         navBarItems.forEach(i => i.style.borderLeft = 'none');
@@ -39,9 +42,10 @@ window.onscroll = function () {
     navBarLang.style.border = '1px solid #fff';
     navBarActive.style.color = '#2d5ec2';
     secondLanguage.style.border = '1px solid #fff';
-    if (window.screen.availWidth <= 1200 && window.screen.availWidth > 1024) {
+    document.querySelector('nav.fixed').style.top = '50px';
+    if (window.innerWidth <= 1200 && window.innerWidth > 1024) {
         document.querySelector('nav.fixed').style.top = '95px';
-    }else if (window.screen.availWidth <= 1024) {
+    }else if (window.innerWidth <= 1024) {
         headerTop.style.top = '20px';
         document.querySelector('nav.fixed').style.top = '0';
         navBarItems.forEach(i => i.style.borderLeft = 'none');
