@@ -1,6 +1,6 @@
 function openBurger() {
   document.querySelector('.burger').classList.toggle('burger_open');
-  document.querySelector('nav.fixed').classList.toggle('nav_open');
+  document.querySelector('.nav').classList.toggle('nav_open');
 }
 document.querySelector('.burger').addEventListener('click', openBurger);
 
@@ -32,8 +32,8 @@ popup.classList.toggle('show');
 // }())
 
 let menuRight = document.querySelector('.fixed-right');
-menuRight.style.right = (window.outerWidth - 1140) / 2 + 'px';
+if (window.outerWidth > 1024 ) menuRight.style.right = (window.outerWidth - 1140) / 2 + 'px';
 
 window.addEventListener('resize', () => {
-	menuRight.style.right = (window.outerWidth - 1140) / 2 + 'px';
+	if (window.outerWidth > 1024) menuRight.style.right = (window.outerWidth - 1140) / 2 + 'px';
 });

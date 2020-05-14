@@ -80,6 +80,9 @@ header {
     color: #288ad3;
     margin-right: 10px;
 }
+.directory__item_active:before {
+    content: '';
+}
 .directory__item a {
     font-size: 14px;
     font-weight: bold;
@@ -130,4 +133,123 @@ header {
     font-size: 10px;
     line-height: 1.5;
     text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .logo_wrapper, .fixed-right {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .fixed-right {
+    margin-top: 40px;
+    right: unset;
+    width: 100%;
+  }
+  .header__top {
+    height: 120px;
+  }
+  .gallery__item {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header__top.fixed {
+    padding: 0;
+    width: 105vw;
+    height: 70px;
+  }
+  .logo {
+    margin-top: 15px;
+  }
+  .logo_wrapper, .fixed-right {
+    position: absolute;
+     left: 0; 
+     transform: unset; 
+     margin-top: 0;
+  }
+  .nav {
+    transition: .5s;
+    transform: scale(0);
+    background-color: rgba(0, 0, 0, 0.739);
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+  }
+  .nav_open {
+    transform: scale(1) !important;
+  }
+  .nav ul {
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 70%;
+    margin-top: 60px;
+  }
+  .nav li {
+    border-left: none;
+  }
+  .nav a {
+    font-size: 24px;
+  }
+  .navbar__item:last-of-type {
+    display: none;
+  }
+  .navbar___active a {
+    color: #ffffff;
+  }
+  a.fixed {
+    left: unset;
+    transform: unset;
+    top: 25px;
+  }
+  .numbers {
+    display: none;
+  }
+  .burger {
+    position: fixed;
+    right: 9%;
+    top: 25px;
+    z-index: 2;
+    width: 30px;
+    height: 26px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+    
+  }
+  .burger span {
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    transition: 0.5s;
+  }
+  .burger_open {
+    z-index: 3;
+  }
+  .burger_open span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+  .burger_open span:nth-child(2) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+  .burger_open span:nth-child(3) {
+    opacity: 0;
+  }
+  .header_scroll {
+    height: 90px;
+  }
+  .gallery-min__item, .social__list {
+    margin-bottom: 30px;
+  }
+  .directory__item a {
+    font-size: 1.3vw;
+  }
+  .gallery__item {
+    margin-bottom: 30px;
+  }
 }
