@@ -227,6 +227,7 @@ section {
 
 .section__heading {
   margin-bottom: 50px;
+  margin-left: 20px;
 }
 .section__heading h2 {
   font-size: 24px;

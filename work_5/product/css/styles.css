@@ -9,12 +9,35 @@ header {
     background-color: #fff;
     left: 0;
     top: 0;
-    padding: 20px 16.6%;
-    padding-right: 7vw;
+    padding: 20px 0;
+}
+
+.fixed-right {
+    position: fixed;
+    right: 200px;
+    width: auto;
+}
+
+.header_wrapper {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    margin: 0 auto;
+    width: 1130px;
+}
+
+.header__middle {
+    margin-bottom: 0;
 }
 
 .navbar a {
     color: #2d5ec2;
+}
+
+.navbar a:hover {
+    color: #101F3F;
 }
 
 .navbar__language {
@@ -31,4 +54,80 @@ header {
 
 .numbers {
     margin-bottom: 40px;
+}
+
+.directory {
+    margin-bottom: 50px;
+}
+.directory__list {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+.directory__item {
+    margin-right: 10px;
+}
+
+.directory__item:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 600;
+    font-size: 11px;
+    vertical-align: middle;
+    content: '\f054';
+    color: #288ad3;
+    margin-right: 10px;
+}
+.directory__item a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+}
+.directory__item_active a{
+    color: #2D5EC2;
+}
+
+.section__heading h2 {
+    text-transform: unset;
+}
+
+.gallery__item {
+    width: 100%;
+    height: 250px;
+}
+
+.gallery__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery_small {
+    height: 184px;
+}
+
+
+.section__download {
+    text-align: end;
+    margin-top: 50px;
+    align-self: center;
+    font-size: 14px;
+}
+
+.section__download a {
+    color: #000;
+    font-weight: bold;
+}
+
+.section__download i {
+    color: #fff;
+    background-color: #2D5EC2;
+    display: inline-block;
+    width: 19px;
+    height: 16px;
+    font-size: 10px;
+    line-height: 1.5;
+    text-align: center;
 }
