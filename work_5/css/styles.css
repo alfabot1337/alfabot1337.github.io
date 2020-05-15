@@ -587,7 +587,7 @@ footer {
   .burger {
     position: fixed;
     right: 9%;
-    top: 25px;
+    top: 32px;
     z-index: 2;
     width: 30px;
     height: 26px;
