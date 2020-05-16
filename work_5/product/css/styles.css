@@ -4,6 +4,10 @@ header {
     background-position-y: center;
 }
 
+.header__middle {
+    margin-bottom: 0;
+}
+
 .numbers {
     margin-bottom: 40px;
 }

@@ -65,7 +65,7 @@ window.onscroll = function () {
 
 function openBurger() {
   document.querySelector('.burger').classList.toggle('burger_open');
-  document.querySelector('.nav').classList.toggle('nav_open');
+  document.querySelector('nav.fixed').classList.toggle('nav_open');
 }
 document.querySelector('.burger').addEventListener('click', openBurger);
 

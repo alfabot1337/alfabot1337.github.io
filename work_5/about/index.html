@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIK</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../product/css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <header>
+        <div class="slide-first"></div>
+        <div class="slide-second"></div>
+        <div class="slide-third"></div>
+        <div class="slide-fourth"></div>
+        <div class="container">
+          <div class="row header__top fixed">
+            <div class="header_scroll"></div>
+            <div class="col-lg-3">
+              <a href="#" class="fixed">
+                <img class="logo" src="../img/logo.png" alt="AIK Logo"/>
+              </a>
+            </div>
+            <div class="col-lg-9 ml-auto">
+              <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <nav class="fixed">
+                
+                <ul class="navbar navbar-default navbar-fixed-bottom">
+                  <li class="navbar__item">
+                    <a href="../index.html">Главная</a>
+                  </li>
+                  <li class="navbar__item"><a href="#">О компании</a></li>
+                  <li class="navbar__item navbar___active"><a href="product/index.html">Продукт</a></li>
+                  <li class="navbar__item"><a href="#">Статьи</a></li>
+                  <li class="navbar__item"><a href="#">Достижения</a></li>
+                  <li class="navbar__item"><a href="#">Новости</a></li>
+                  <li class="navbar__item"><a href="#">Контакты</a></li>
+                  <li class="navbar__item"><a href="#">Log in</a></li>
+                  <li class="navbar__item">
+                    <div class="navbar__search">
+                      <input
+                        type="search"
+                        name="search"
+                        id="search"
+                        placeholder="Введите слово..."
+                      />
+                      <button
+                        type="submit"
+                        class="search__button"
+                        onclick="searchToggle()"
+                      >
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </div>
+                    <a
+                      href="#"
+                      onclick="searchToggle()"
+                      class="search-open search-show"
+                      ><i class="fa fa-search"></i
+                    ></a>
+                    <div class="language-switcher">
+                      <a href="#" class="navbar__language main-language">RU</a>
+                      <a href="#" class="navbar__language second-language">EN</a>
+                    </div>
+  
+                    <!-- <a href="#" class="navbar__language language-bottom">EN</a> -->
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="row header__middle">
+            <div class="col-lg-3">
+              <ul class="numbers">
+                <li class="numbers__item">
+                  <img src="../img/flags/flag-1.png" />
+                  <span>+38(073)985 96 66</span>
+                </li>
+                <li class="numbers__item">
+                  <img src="../img/flags/flag-2.png" />
+                  <span>+38(073)985 96 66</span>
+                </li>
+                <li class="numbers__item">
+                  <img src="../img/flags/flag-3.png" />
+                  <span>+38(073)985 96 66</span>
+                </li>
+                <li class="numbers__item">
+                  <img src="../img/flags/flag-4.png" />
+                  <span>+38(073)985 96 66</span>
+                </li>
+                <li class="numbers__item">
+                  <img src="../img/flags/flag-5.png" />
+                  <span>+38(073)985 96 66</span>
+                </li>
+                <li class="numbers__item">
+                  <img src="../img/flags/flag-6.png" />
+                  <span>+38(073)985 96 66</span>
+                </li>
+                <li class="numbers__item">
+                  <img src="../img/flags/flag-7.png" />
+                  <span>+38(073)985 96 66</span>
+                </li>
+                <li class="numbers__item">
+                  <img src="../img/flags/flag-8.png" />
+                  <span>+38(073)985 96 66</span>
+                </li>
+                <li class="numbers__item">
+                  <img src="../img/flags/flag-9.png" />
+                  <span>+38(073)985 96 66</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6 offset-lg-3 col-md-12 offset-md-0 header__content">
+              <h1>Ваш урожай - это наша профессия</h1>
+              <p>Текстовка: краткое описание компании, предлагаемые услуги и прочее</p>
+              
+            </div>
+            <a href="#" class="convert" onclick="popUp()"></a>
+          </div>
+        </div>
+        <div class="popup-wrapper">
+          <div class="popup">
+            <h3 class="popup_header">
+              Свяжитесь с нами
+            </h3>
+            <form action="#">
+              <div class="popup__inputs">
+                <div class="popup__input">
+                  <input
+                    type="text"
+                    id="secondname"
+                    placeholder="Ваше ФИО"
+                    required
+                  />
+                  <label for="secondname">ФИО</label>
+                </div>
+                <div class="popup__input">
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="example@gmail.com"
+                    required
+                  />
+                  <label for="email">E-mail</label>
+                </div>
+                <div class="popup__input">
+                  <input type="tel" id="tel" placeholder="+38(091)111 11 11" />
+                  <label for="tel">Номер телефона</label>
+                </div>
+                <div class="popup__input">
+                  <input
+                    type="text"
+                    id="country"
+                    placeholder="Ваша страна"
+                    required
+                  />
+                  <label for="country">Страна</label>
+                </div>
+                <div class="popup__input">
+                  <input
+                    type="text"
+                    id="company"
+                    placeholder="Ваше предприятие"
+                  />
+                  <label for="company">Название предприятия</label>
+                </div>
+                <div class="popup__input">
+                  <input type="text" id="area" placeholder="Площадь" />
+                  <label for="area">Обрабатываемая площадь</label>
+                </div>
+                <div class="popup__input">
+                  <textarea
+                    name="question"
+                    id="question"
+                    placeholder="Ваш текст..."
+                    required
+                  ></textarea>
+                  <label for="area">Ваш вопрос</label>
+                </div>
+              </div>
+              <button type="submit">Отправить</button>
+            </form>
+            <div class="popup__close" onclick="popUp()">
+              <i class="fas fa-times"></i>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="about">
+          <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                  <div class="directory">
+                    <ul class="directory__list">
+                      <li class="directory__item directory__item_active"><a href="#">ДОМАШНЯЯ СТРАНИЦА</a></li>
+                      <li class="directory__item"><a href="#">О КОМПАНИИ</a></li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="about__content">
+                        <div class="about__hello">
+                            <h2 class="about__content__header">
+                                О компании
+                            </h2>
+                            <p>Добро пожаловать в группу команий A.I.K.!</p>
+                            <p>Ниже Вы найдёте общую информацию о нашей группе компаний.</p>
+                            <p>Приглашаем Вас также посетить раздел “статьи”, где Вы сможете почерпнуть много полезной информации о различных типах оборудования для капельного срошения, принципах выбора систем капельного орошения, общей теории строения систем капельного орошения, агрономических аспектах выращивания сельськохозайственных культур, принципах полива, подкомрмки и защиты растений и многое другое.</p>
+                            <p>Мы будем рады пообщаться с Вами, если Вы оставите свои контакты в разделе “контакты”, или обратитесь в любой из наших филиалов</p>    
+                        </div>
+                        <div class="about__image">
+                            <img src="img/about.jpg" alt="About">
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </section>
+</body>
+</html>

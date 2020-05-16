@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIK</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../product/css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <header>
+        <div class="slide-first"></div>
+        <div class="slide-second"></div>
+        <div class="slide-third"></div>
+        <div class="slide-fourth"></div>
+        <div class="container">
+          <div class="row header__top fixed">
+            <div class="header_scroll"></div>
+            <div class="col-lg-3">
+              <a href="#" class="fixed">
+                <img class="logo" src="../img/logo.png" alt="AIK Logo"/>
+              </a>
+            </div>
+            <div class="col-lg-9 ml-auto">
+              <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <nav class="fixed">
+                
+                <ul class="navbar navbar-default navbar-fixed-bottom">
+                  <li class="navbar__item">
+                    <a href="../index.html">Главная</a>
+                  </li>
+                  <li class="navbar__item"><a href="#">О компании</a></li>
+                  <li class="navbar__item navbar___active"><a href="product/index.html">Продукт</a></li>
+                  <li class="navbar__item"><a href="#">Статьи</a></li>
+                  <li class="navbar__item"><a href="#">Достижения</a></li>
+                  <li class="navbar__item"><a href="#">Новости</a></li>
+                  <li class="navbar__item"><a href="#">Контакты</a></li>
+                  <li class="navbar__item"><a href="#">Log in</a></li>
+                  <li class="navbar__item">
+                    <div class="navbar__search">
+                      <input
+                        type="search"
+                        name="search"
+                        id="search"
+                        placeholder="Введите слово..."
+                      />
+                      <button
+                        type="submit"
+                        class="search__button"
+                        onclick="searchToggle()"
+                      >
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </div>
+                    <a
+                      href="#"
+                      onclick="searchToggle()"
+                      class="search-open search-show"
+                      ><i class="fa fa-search"></i
+                    ></a>
+                    <div class="language-switcher">
+                      <a href="#" class="navbar__language main-language">RU</a>
+                      <a href="#" class="navbar__language second-language">EN</a>
+                    </div>
+  
+                    <!-- <a href="#" class="navbar__language language-bottom">EN</a> -->
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="row header__middle">
+            <div class="col-lg-3">
+              <ul class="numbers">
+                <li class="numbers__item">
+                  <img src="../img/flags/flag-1.png" />
+                  <span>+38(073)985 96 66</span>
+                </li>
+                <li class="numbers__item">
+                  <img src="../img/flags/flag-2.png" />
+                  <span>+38(073)985 96 66</span>
+                </li>
+                <li class="numbers__item">
+                  <img src="../img/flags/flag-3.png" />
+                  <span>+38(073)985 96 66</span>
+                </li>
+                <li class="numbers__item">
+                  <img src="../img/flags/flag-4.png" />
+                  <span>+38(073)985 96 66</span>
+                </li>
+                <li class="numbers__item">
+                  <img src="../img/flags/flag-5.png" />
+                  <span>+38(073)985 96 66</span>
+                </li>
+                <li class="numbers__item">
+                  <img src="../img/flags/flag-6.png" />
+                  <span>+38(073)985 96 66</span>
+                </li>
+                <li class="numbers__item">
+                  <img src="../img/flags/flag-7.png" />
+                  <span>+38(073)985 96 66</span>
+                </li>
+                <li class="numbers__item">
+                  <img src="../img/flags/flag-8.png" />
+                  <span>+38(073)985 96 66</span>
+                </li>
+                <li class="numbers__item">
+                  <img src="../img/flags/flag-9.png" />
+                  <span>+38(073)985 96 66</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6 offset-lg-3 col-md-12 offset-md-0 header__content">
+              <h1>ТЕКСТ текст текст текст</h1>
+              <p>Текстовка: краткое описание компании, предлагаемые услуги и прочее</p>
+              
+            </div>
+            <a href="#" class="convert" onclick="popUp()"></a>
+          </div>
+        </div>
+        <div class="popup-wrapper">
+          <div class="popup">
+            <h3 class="popup_header">
+              Свяжитесь с нами
+            </h3>
+            <form action="#">
+              <div class="popup__inputs">
+                <div class="popup__input">
+                  <input
+                    type="text"
+                    id="secondname"
+                    placeholder="Ваше ФИО"
+                    required
+                  />
+                  <label for="secondname">ФИО</label>
+                </div>
+                <div class="popup__input">
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="example@gmail.com"
+                    required
+                  />
+                  <label for="email">E-mail</label>
+                </div>
+                <div class="popup__input">
+                  <input type="tel" id="tel" placeholder="+38(091)111 11 11" />
+                  <label for="tel">Номер телефона</label>
+                </div>
+                <div class="popup__input">
+                  <input
+                    type="text"
+                    id="country"
+                    placeholder="Ваша страна"
+                    required
+                  />
+                  <label for="country">Страна</label>
+                </div>
+                <div class="popup__input">
+                  <input
+                    type="text"
+                    id="company"
+                    placeholder="Ваше предприятие"
+                  />
+                  <label for="company">Название предприятия</label>
+                </div>
+                <div class="popup__input">
+                  <input type="text" id="area" placeholder="Площадь" />
+                  <label for="area">Обрабатываемая площадь</label>
+                </div>
+                <div class="popup__input">
+                  <textarea
+                    name="question"
+                    id="question"
+                    placeholder="Ваш текст..."
+                    required
+                  ></textarea>
+                  <label for="area">Ваш вопрос</label>
+                </div>
+              </div>
+              <button type="submit">Отправить</button>
+            </form>
+            <div class="popup__close" onclick="popUp()">
+              <i class="fas fa-times"></i>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="product__info">
+          <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                  <div class="directory">
+                    <ul class="directory__list">
+                      <li class="directory__item directory__item_active"><a href="#">ДОМАШНЯЯ СТРАНИЦА</a></li>
+                      <li class="directory__item"><a href="#">ПРОДУКТ</a></li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="product__info__heading">
+                        <h2 class="product__info__heading__header">
+                            Текст текст текст текст текст текст текст текст текст текст
+                        </h2>
+                        <p class="product__info__heading__description">
+                            Текст текст текст
+                        </p>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </section>
+
+      <section class="product bg-blue">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 section__heading">
+              <h2>Системы внесения удобрений</h2>
+              <p>
+                Дополнительный текст, Дополнительный текст, Дополнительный текст
+              </p>
+            </div>
+          </div>
+          <div class="row product__gallery">
+            <div class="col-lg-3">
+              <div class="gallery__item">
+                <a href="#"><img src="img/fertilizer/fertilizer-1.jpg" alt="Item"></a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="gallery__item">
+                <a href="#"><img src="img/fertilizer/fertilizer-2.jpg" alt="Item"></a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="gallery__item">
+                <a href="#"><img src="img/fertilizer/fertilizer-3.jpg" alt="Item"></a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="gallery__item">
+                <a href="#"><img src="img/fertilizer/fertilizer-4.jpg" alt="Item"></a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <a href="" class="section__more">ПОДРОБНЕЕ</a>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="product">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 section__heading">
+              <h2>Оборудование, компоненты, запасные части</h2>
+              <p>
+                Дополнительный текст, Дополнительный текст, Дополнительный текст
+              </p>
+            </div>
+          </div>
+          <div class="row product__gallery">
+            <div class="col-lg-3">
+              <div class="gallery__item gallery_small">
+                <a href="#"><img src="img/dosing/dosing-1.jpg" alt="Item"></a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="gallery__item gallery_small">
+                <a href="#"><img src="img/dosing/dosing-2.jpg" alt="Item"></a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="gallery__item gallery_small">
+                <a href="#"><img src="img/dosing/dosing-3.jpg" alt="Item"></a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="gallery__item gallery_small">
+                <a href="#"><img src="img/dosing/dosing-4.jpg" alt="Item"></a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <a href="" class="section__more">ПОДРОБНЕЕ</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="product bg-blue">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 section__heading">
+              <h2>Услуги</h2>
+              <p>
+                Дополнительный текст, Дополнительный текст, Дополнительный текст
+              </p>
+            </div>
+          </div>
+          <div class="row product__gallery">
+            <div class="col-lg-3">
+              <div class="gallery__item">
+                <a href="#"><img src="img/fertilizer/fertilizer-1.jpg" alt="Item"></a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="gallery__item">
+                <a href="#"><img src="img/fertilizer/fertilizer-2.jpg" alt="Item"></a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="gallery__item">
+                <a href="#"><img src="img/fertilizer/fertilizer-3.jpg" alt="Item"></a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="gallery__item">
+                <a href="#"><img src="img/fertilizer/fertilizer-4.jpg" alt="Item"></a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <a href="" class="section__more">ПОДРОБНЕЕ</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="product">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 section__heading">
+              <h2>Кучное выщелачивание</h2>
+              <p>
+                Дополнительный текст, Дополнительный текст, Дополнительный текст
+              </p>
+            </div>
+          </div>
+          <div class="row product__gallery">
+            <div class="col-lg-4">
+              <div class="gallery__item">
+                <a href="#"><img src="../product/img/fertilizer/fertilizer-1.jpg" alt="Item"></a>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="gallery__item">
+                <a href="#"><img src="../product/img/fertilizer/fertilizer-2.jpg" alt="Item"></a>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="gallery__item">
+                <a href="#"><img src="../product/img/fertilizer/fertilizer-3.jpg" alt="Item"></a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <a href="" class="section__more">ПОДРОБНЕЕ</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feedback bg-blue">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-6 offset-lg-1">
+                      <div class="feedback__content">
+                          <div class="content__icon">
+                            <img src="img/done.png" alt="Feedback icon">
+                          </div>
+                          <div class="content_heading section__heading">
+                            <h2>Оборудование, компоненты, запасные части</h2>
+                            <p>
+                              Дополнительный текст, Дополнительный текст, Дополнительный текст
+                            </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <a href="" class="section__more">ПОДРОБНЕЕ</a>
+                </div>
+              </div>
+          </div>
+      </section>
+
+      <section class="social">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <p class="social__thanks">
+                Спасибо за ваш интерес к A.I.K. Выберите тип запроса, который вы
+                хотели бы сделать из вариантов ниже
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3">
+              <h3 class="social__header">
+                Наши партнеры
+              </h3>
+              <ul class="social__list">
+                <li><a href="#">Текст Текст</a></li>
+                <li><a href="#">Текст Текст Текст</a></li>
+                <li><a href="#">Текст Текст Текст Текст Текст</a></li>
+                <li><a href="#">Текст Текст Текст</a></li>
+                <li><a href="#">Текст Текст Текст Текст Текст</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3">
+              <h3 class="social__header">
+                Рекомендованные статьи
+              </h3>
+              <ul class="social__list">
+                <li><a href="#">Ссылки</a></li>
+                <li><a href="#">Текст Текст Текст</a></li>
+                <li><a href="#">Текст Текст Текст Текст Текст</a></li>
+                <li><a href="#">Текст Текст Текст</a></li>
+                <li><a href="#">Текст Текст</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3">
+              <h3 class="social__header">
+                Информация
+              </h3>
+              <ul class="social__list">
+                <li><a href="#">Общие вопросы</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Задать вопрос</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Условия использования</a></li>
+                <li><a href="#">Политика конфиденциальности</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3">
+              <h3 class="social__header">
+                Мы в соц. сетях
+              </h3>
+              <ul class="social">
+                <li>
+                  <a href="#" class="social__item fb"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="social__item twitter"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="social__item vk"
+                    ><i class="fab fa-vk"></i
+                  ></a>
+                </li>
+              </ul>
+              <div class="social__subscribe">
+                <h3 class="subscribe__header">Оформить подписку</h3>
+                <form action="">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="укажите свой e-mail"
+                  />
+                  <input type="submit" value="" />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+  
+      <footer>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              Все права защищены &copy; 2020
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <script src="../product/js/main.js"></script>
+</body>
+</html>
