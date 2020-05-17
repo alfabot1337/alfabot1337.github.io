@@ -1,5 +1,5 @@
 .about__content__header {
-    font-size: 36px;
+    font-size: 35px;
     color: #2D5EC2;
     font-weight: bold;
 }
@@ -16,4 +16,39 @@
 .about__image img{
     width: 500px;
     height: 350px;
+}
+
+.goals__image img {
+	width: 367px;
+	height: 367px;
+	object-fit: cover;
+}
+
+.item__title {
+	color: #2D5EC2;
+	font-size: 35px;
+	font-weight: 600;
+}
+
+.item__description {
+	margin-bottom: 0;
+	font-size: 17px;
+}
+
+.item__description:before {
+	content: '•';
+	margin-right: 10px;
+}
+
+.activity__text {
+	font-size: 17px;
+}
+
+.activity .section__more {
+	margin: 50px 0 0;
+}
+
+.activity hr {
+	height: 3px;
+	background-color: #C4C4C4;
 }
