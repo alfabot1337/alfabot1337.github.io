@@ -1,0 +1,109 @@
+@import url('../../css/styles.css');
+
+.navbar ul li a:not(.navbar__current) {
+  opacity: 0.7;
+}
+.meet {
+	margin: 50px -6.255%;
+}
+
+.meet__top {
+  background-image: url(../img/header_bg.jpg);
+  background-size: cover;
+  /*margin: 50px -6.255%;*/
+  height: 777px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.meet__content {
+	background-color: #fff;
+	width: 85%;
+	padding: 40px 25px 60px 50px;
+}
+.meet__content p {
+	margin-top: 35px;
+	font-size: 1.2vw;
+	opacity: .8;	
+	line-height: 1.4;
+}
+
+.meet__count {
+	width: 15%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.meet__count .number {
+	font-size: 3.2vw;
+}
+.meet__count .numbers-text {
+	font-size: 1.1vw;
+	width: 44%;
+	position: unset;
+	margin-left: 5px;
+}
+.meet_engineers {
+	display: flex;
+	align-items: flex-start;
+	margin-top: 50px;
+}
+.meet_engineers .meet__content,
+.meet_engineers .meet__content p{
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.section-heading {
+	font-size: 48px;
+}
+
+.team__slider {
+	margin-top: 70px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.slider__item {
+	flex-basis: 24%;
+	background: #fab;
+	outline: 1px solid red;
+	height: 29vw;
+	margin: 20px 0;
+	cursor: pointer;
+	filter: grayscale(100%);
+	transition: .5s;
+}
+.slider__item:hover {
+	filter: none;
+}
+.slider__main_info {
+	flex-basis: 100%;
+	background: #fab;
+	height: 433px;
+	display: flex;
+}
+
+.slider__description {
+	padding: 80px 0 0 40px;
+	flex-basis: 65%;
+}
+.description__heading {
+	padding-bottom: 15px;
+	font-size: 48px;
+	width: max-content;
+	border-bottom: 1px solid #000;
+}
+.description__spec {
+	font-size: 24px;
+	margin: 15px 0;
+}
+.description__links .link img{
+	width: 26px;
+	height: 26px;
+}
+.slider__player {
+	height: 100%;
+	flex-basis: 35%;
+	background-color: #fba;
+}
