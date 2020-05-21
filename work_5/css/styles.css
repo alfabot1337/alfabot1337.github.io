@@ -135,6 +135,9 @@ nav.fixed {
 
 .numbers {
   margin-left: -15px;
+  position: fixed;
+  left: 5%;
+  z-index: 3;
 }
 .numbers__item {
   margin-bottom: 15px;
@@ -582,7 +585,7 @@ footer {
     top: 25px;
   }
   .numbers {
-    display: none;
+    /*display: none;*/
   }
   .burger {
     position: fixed;
