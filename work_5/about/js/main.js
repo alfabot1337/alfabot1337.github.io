@@ -19,6 +19,7 @@ window.onscroll = function () {
     navBarLang.style.border = '1px solid #2d5ec2';
     secondLanguage.style.border = '1px solid #2d5ec2';
     document.querySelector('nav.fixed').style.top = '15px';
+    navBarActive.style.color = '#000';
 
     if (window.innerWidth <= 1200 && window.innerWidth > 1024) {
         document.querySelector('nav.fixed').style.top = '60px';
