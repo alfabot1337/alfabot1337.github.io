@@ -226,9 +226,6 @@
   width: 100%;
 }
 
-.numbers {
-  position: unset;
-}
 
 @media screen and (max-width: 1200px) {
 }
@@ -245,10 +242,6 @@
   }
   .tel__list__item {
     font-size: 13px;
-  }
-
-  .numbers {
-    display: none;
   }
 }
 

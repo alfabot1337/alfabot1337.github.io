@@ -584,9 +584,6 @@ footer {
     transform: unset;
     top: 25px;
   }
-  .numbers {
-    /*display: none;*/
-  }
   .burger {
     position: fixed;
     right: 9%;
@@ -670,5 +667,11 @@ footer {
     display: block; 
     margin: 0 auto; 
     padding: 10px 20px; 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .numbers {
+    position: unset;
   }
 }
