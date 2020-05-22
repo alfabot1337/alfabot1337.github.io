@@ -98,7 +98,6 @@
   left: -3%;
   position: absolute;
   width: 106%;
-  z-index: -1;
 }
 
 .slider-control ul {
@@ -108,5 +107,6 @@
 .slider-control .prev,
 .slider-control .next {
 	background: none;
+	user-select: none;
 }
 
