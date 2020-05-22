@@ -1,0 +1,60 @@
+@import url('../../css/styles.css');
+
+.navbar ul li a:not(.navbar__current) {
+  opacity: 0.7;
+}
+
+.section-heading {
+	margin: 100px 0;
+}
+
+.contacts__list {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+}
+
+.list__contact {
+	padding: 18px 78px;
+	min-height: 180px;
+	border-right: 1px solid #000;
+	flex-basis: 400px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-align: center;
+}
+
+.list__contact:last-of-type {
+	border-right: 0;
+}
+
+.contact__icon img {
+	width: 43px;
+	height: 100%;
+}
+
+.contact__title {
+	font-size: 24px;
+}
+
+.contact__description {
+	font-size: 18px;
+}
+
+.location {
+	padding-top: 80px;
+}
+
+.map img {
+	width: 100%;
+	height: 500px;
+	object-fit: cover;
+}
