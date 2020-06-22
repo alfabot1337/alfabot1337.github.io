@@ -1,0 +1,30 @@
+@import url(../../css/styles.css);
+@import url(../../blog/css/styles.css);
+
+
+.blog-last__preview {
+	padding: 150px 0 100px;
+}
+
+.blog_text {
+	font-size: 1.2rem;
+	line-height: 1.2;
+}
+
+.blog_article {
+	padding-top: 40px;
+}
+.article_header {
+	font-size: 1.6rem;
+}
+
+.article__content {
+	margin: 40px 0;
+}
+
+.article__image img {
+	object-fit: none;
+	display: block;
+	border: 1px solid #d3d2d3;
+	margin: 47px auto;
+}
